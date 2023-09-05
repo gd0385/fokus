@@ -13,10 +13,10 @@ const musicaFocoInput = document.querySelector('#alternar-musica');
 
 const temporizador = document.querySelector('#timer');
 
-const musica = new Audio('/sons/luna-rise-part-one.mp3');
-const audioPlay = new Audio('/sons/play.wav');
-const audioPause = new Audio('/sons/pause.mp3');
-const audioTempoEsgotado = new Audio('/sons/beep.mp3');
+const musica = new Audio('./sons/luna-rise-part-one.mp3');
+const audioPlay = new Audio('./sons/play.wav');
+const audioPause = new Audio('./sons/pause.mp3');
+const audioTempoEsgotado = new Audio('./sons/beep.mp3');
 
 let tempoDecorridoEmSegundos = 1500;
 let intervaloId = null;
@@ -61,7 +61,7 @@ function alterarContexto(contexto) {
     botoes.forEach(botao => botao.classList.remove('active'));
 
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `imagens/${contexto}.png`);
+    banner.setAttribute('src', `./imagens/${contexto}.png`);
     switch (contexto) {
         case "foco":
             titulo.innerHTML = `
@@ -108,14 +108,14 @@ function iniciarOuPausar() {
         return;
     }
     audioPlay.play();
-    startPauseBtnImg.setAttribute('src', '/imagens/pause.png');
+    startPauseBtnImg.setAttribute('src', './imagens/pause.png');
     startPauseBtnTxt.textContent = 'Pausar';
     intervaloId = setInterval(contagemRegressiva, 1000);
 }
 
 function zerar() {
     clearInterval(intervaloId);
-    startPauseBtnImg.setAttribute('src', '/imagens/play_arrow.png');
+    startPauseBtnImg.setAttribute('src', './imagens/play_arrow.png');
     startPauseBtnTxt.textContent = 'Começar';
     intervaloId = null;
 }
