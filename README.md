@@ -24,4 +24,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 
 ## Link
-<a href="https://gd0385.github.io/fokus/">fokus</a>
+<a href="https://gd0385.github.io/fokus/" target="_blank">fokus</a>
+
+## Licença
+
+Esse projeto está sob a licença MIT.
